@@ -1,0 +1,30 @@
+.Search {
+  position: relative;
+}
+.Search input {
+  width: 200px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 4px 15px 10px 30px;
+  color: #e8bb08;
+  outline: none;
+}
+.Search .icon {
+  position: absolute;
+  top: 5px;
+}
+@media only screen and (max-width: 958px) {
+  .Search {
+    font-size: 1.5em;
+  }
+  .Search input {
+    padding: 4px 12px 4px 40px;
+    font-size: .8em;
+  }
+  .Search input::-webkit-input-placeholder {
+    font-size: 1em;
+    margin-top: 3px;
+    font-weight: 300;
+  }
+}

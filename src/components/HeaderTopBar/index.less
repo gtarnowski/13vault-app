@@ -1,0 +1,70 @@
+@import "../../styles/media";
+@import "../../styles/colors";
+
+.HeaderTopBar {
+  display: grid;
+  align-content: center;
+  box-shadow: inset 0px -8px 37px -20px rgba(0, 0, 0, 0.75);
+  padding: 0 15px;
+
+  .container {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    grid-column-gap: 15px;
+
+    .icon-logo {
+      color: @primary;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2em;
+      font-weight:900;
+
+      span {
+        font-weight: 200;
+        font-size: .9em;
+        vertical-align: top;
+      }
+    }
+
+    aside {
+      display: grid;
+      grid-column-gap: 10px;
+      grid-template-columns: repeat(5, 1fr);
+      font-size: 1.4em;
+
+      svg {
+        cursor: pointer;
+        transition: .3s ease-out;
+
+
+        &:hover {
+          color: @primary !important;
+        }
+      }
+
+    }
+
+    @media @mobiles-only {
+      padding: 10px 0;
+
+      aside {
+        display: none;
+      }
+      .container {
+      }
+      //grid-template-columns: ;
+    }
+
+    @media @desktops {
+      width: 100%;
+      margin:  0 auto;
+      max-width: 1200px;
+    }
+  }
+
+  @media @phones-only {
+    padding-right: 0;
+  }
+}

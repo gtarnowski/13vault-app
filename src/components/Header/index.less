@@ -1,0 +1,24 @@
+@import "../../styles/media";
+@import "../../styles/colors";
+
+.Header {
+  display: grid;
+  background-color: @dark-primary;
+  color: @snowy;
+
+  @media @mobiles-only {
+    grid-template-areas: 'logo menu';
+    grid-template-columns: max-content 1fr;
+
+    .HeaderTopBar {
+      grid-area: logo;
+    }
+    .HeaderLinks {
+      grid-area: menu;
+    }
+  }
+
+  @media @desktops {
+   grid-template-rows: 90px 60px;
+  }
+}

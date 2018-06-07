@@ -1,0 +1,26 @@
+.NotFound {
+  height: 80%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  grid-row-gap: 30px;
+}
+.NotFound h1 {
+  font-size: 8em;
+  color: #565656;
+  font-weight: 200;
+}
+.NotFound h1 svg {
+  margin-right: 20px;
+  color: #e8bb08;
+}
+.NotFound h3 {
+  font-size: 2em;
+  color: #565656;
+}
+.NotFound span {
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.3;
+}

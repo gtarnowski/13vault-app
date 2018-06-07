@@ -1,0 +1,22 @@
+.Header {
+  display: grid;
+  background-color: #292929;
+  color: #fff;
+}
+@media only screen and (max-width: 958px) {
+  .Header {
+    grid-template-areas: 'logo menu';
+    grid-template-columns: max-content 1fr;
+  }
+  .Header .HeaderTopBar {
+    grid-area: logo;
+  }
+  .Header .HeaderLinks {
+    grid-area: menu;
+  }
+}
+@media only screen and (min-width: 959px) {
+  .Header {
+    grid-template-rows: 90px 60px;
+  }
+}
