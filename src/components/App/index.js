@@ -9,6 +9,7 @@ import Header from '../Header'
 import NotFound from '../NotFound'
 import Edit from '../Edit'
 import Home from '../Home'
+import Search from '../Search'
 
 class App extends Component {
   render () {
@@ -21,7 +22,8 @@ class App extends Component {
               <Route exact path={URLS.HOME} component={Home} />
               <Route exact path={URLS.NEWS} component={NewsPage} />
               <Route exact path={URLS.NEWS_SINGLE} component={NewSingle} />
-              <Route exact path='/edit' component={Edit}/>
+              <Route exact path={URLS.EDIT} component={Edit}/>
+              <Route exact path={URLS.SEARCH} component={Search}/>
               <Route component={NotFound}/>
             </Switch>
           </div>

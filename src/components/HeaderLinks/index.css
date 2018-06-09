@@ -30,7 +30,7 @@
   color: #e8bb08;
   border-color: #e8bb08 !important;
 }
-.HeaderLinks .container .Search {
+.HeaderLinks .container .SearchControl {
   justify-self: end;
   margin-bottom: 12px;
 }

@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom'
 import './index.css'
 import SocialIcons from '../SocialIcons/index'
 import { NAV_LINKS } from '../../consts/urls'
-import Search from '../Search'
+import SearchControl from '../SearchControl'
 import FontIcon from '@fortawesome/react-fontawesome'
 import faCog from '@fortawesome/fontawesome-free-solid/faCog'
 class HeaderLinks extends Component {
@@ -35,7 +35,7 @@ class HeaderLinks extends Component {
                   {name}
                 </Link>
               ))}
-              <Search />
+              <SearchControl />
             </div>
           </div>
 
@@ -56,7 +56,7 @@ class HeaderLinks extends Component {
               </Link>
             ))}
             <hr/>
-            <Search />
+            <SearchControl />
             <hr/>
             <SocialIcons />
           </div>

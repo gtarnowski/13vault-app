@@ -13,7 +13,9 @@ export const URLS = {
   FALLOUT: '/fallout',
   POST_CULTURE: '/post-culture',
   TECH_SCIENCE: '/tech-science',
-  CREATION: '/creation'
+  CREATION: '/creation',
+  SEARCH: '/search',
+  EDIT: '/edit'
 }
 export const NAV_LINKS = [
   {
