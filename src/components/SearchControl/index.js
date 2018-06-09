@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { withRouter, Redirect } from 'react-router-dom'
-import SearchAutoComplete from '../SearchAutoComplete'
+import { AutoCompleteWithQuery } from '../SearchAutoComplete'
 import FontIcon from '@fortawesome/react-fontawesome'
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch'
 import './index.css'
@@ -23,7 +23,6 @@ class SearchControl extends Component {
     }
   }
   render () {
-    const results = times(8, String) || []
     const { value } = this.state
     return (
       <Fragment>
@@ -37,10 +36,9 @@ class SearchControl extends Component {
             onChange={this.onChange}
             onKeyPress={this.onKeyPress}
           />
-          {value.length > 4 && results.length > 0 && (
-            <SearchAutoComplete results={results}/>
+          {value.length > 4 && (
+            <AutoCompleteWithQuery regex={value}/>
           )}
-
         </div>
       </Fragment>
     )
