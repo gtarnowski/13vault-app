@@ -28,6 +28,7 @@
     "babel-polyfill": "^6.26.0",
     "compression": "^1.7.2",
     "dotenv-cli": "^1.4.0",
+    "draft-js": "^0.10.5",
     "graphql": "^0.12.3",
     "graphql-request": "^1.6.0",
     "graphql-tag": "^2.9.2",

@@ -1,12 +1,21 @@
 import gql from 'graphql-tag'
 
 export default gql`
-  query newsAll {
-    newsAll {
-      title
-      id
-      content
-      date
+  query newsAll($page: Int = 1) {
+    newsAll(page: { limit: 25, page: $page }) {
+      news {
+        title
+        id
+        email
+        username
+        date
+      }
+      pagination {
+        page
+        pages
+        total
+        limit
+      }
     }
   }
 `

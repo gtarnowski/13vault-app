@@ -1,0 +1,19 @@
+.SearchAutoComplete {
+  position: absolute;
+  background-color: #fff;
+  color: #292929;
+  padding: 10px;
+  width: 225px;
+  margin-top: 15px;
+  box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
+}
+.SearchAutoComplete li {
+  text-transform: none;
+  color: #565656;
+  padding: 5px;
+  padding-bottom: 7px;
+}
+.SearchAutoComplete li:hover {
+  background-color: #efefef;
+  color: #e8bb08;
+}

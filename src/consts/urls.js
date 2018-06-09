@@ -6,7 +6,9 @@ import faCodeBranch from '@fortawesome/fontawesome-free-solid/faCodeBranch'
 import faEdit from '@fortawesome/fontawesome-free-solid/faEdit'
 
 export const URLS = {
+  HOME: '/',
   NEWS: '/news',
+  NEWS_SINGLE: '/news/:id',
   COLLECTIVE: '/collective',
   FALLOUT: '/fallout',
   POST_CULTURE: '/post-culture',

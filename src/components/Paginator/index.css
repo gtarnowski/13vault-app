@@ -1,0 +1,63 @@
+.Paginator {
+  list-style: none;
+  margin: 30px auto;
+  padding: 0;
+  text-align: center;
+}
+.Paginator button {
+  background-color: transparent;
+  border: 0;
+  color: #e8bb08;
+  cursor: pointer;
+  display: none;
+  font-size: 1.5em;
+  padding-left: 12px;
+  padding-right: 12px;
+  vertical-align: middle;
+}
+.Paginator button[data-arrow-show='true'] {
+  display: inline-block;
+}
+.Paginator ul {
+  padding: 0;
+}
+.Paginator a,
+.Paginator li {
+  display: inline-block;
+}
+.Paginator a {
+  background-color: #fff;
+  color: #292929;
+  cursor: pointer;
+  font-weight: 300;
+  margin: 0 5px;
+  padding: 3px 5px;
+  text-align: center;
+  width: 35px;
+  border: 1px solid transparent;
+}
+.Paginator a:hover:not(.separator) {
+  background-color: #e8bb08;
+  border: 1px solid #e8bb08;
+  color: #fff !important;
+}
+.Paginator a[data-active='true'] {
+  border: 1px solid #e8bb08;
+  color: #e8bb08;
+  font-weight: 500;
+}
+.Paginator a.separator {
+  cursor: default;
+}
+@media only screen and (max-width: 600px) {
+  .Paginator button {
+    padding-right: 0;
+  }
+  .Paginator button:first-child {
+    padding-left: 0;
+    padding-right: 12px;
+  }
+  .Paginator a {
+    margin: 2px;
+  }
+}

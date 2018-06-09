@@ -1,0 +1,14 @@
+.Loader {
+  color: #018edb;
+  margin-top: 250px;
+  text-align: center;
+}
+.Loader[data-loader='container'] {
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  margin-top: 0 !important;
+}
+.Loader[data-error='true'] {
+  color: #f10;
+}
