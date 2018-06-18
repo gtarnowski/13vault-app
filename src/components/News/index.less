@@ -12,7 +12,7 @@
   padding: 10px;
   display: grid;
   background-color: @snowy;
-  box-shadow: @deep-fog;
+  box-shadow: @mighty-shadows;
   grid-row-gap: 20px;
   grid-template-columns: max-content 1fr;
   grid-column-gap: 15px;
@@ -25,5 +25,9 @@
         display: block;
       }
     }
+  }
+
+  &:hover {
+    box-shadow: @deep-fog;
   }
 }

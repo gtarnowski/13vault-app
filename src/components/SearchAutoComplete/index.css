@@ -6,6 +6,7 @@
   width: 225px;
   margin-top: 15px;
   box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
+  font-size: 16px;
 }
 .SearchAutoComplete li {
   text-transform: none;
@@ -16,4 +17,23 @@
 .SearchAutoComplete li:hover {
   background-color: #efefef;
   color: #e8bb08;
+}
+@media only screen and (max-width: 480px) {
+  .SearchAutoComplete {
+    width: 100%;
+  }
+  .SearchAutoComplete li {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 958px) {
+  .SearchAutoComplete {
+    width: 300px;
+    margin-left: 15px;
+  }
+}
+@media only screen and (max-width: 958px) {
+  .SearchAutoComplete {
+    top: 70px;
+  }
 }

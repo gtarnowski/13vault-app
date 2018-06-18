@@ -14,17 +14,35 @@
   position: absolute;
   top: 5px;
 }
+.SearchControl .ToggleMenu {
+  display: none;
+}
 @media only screen and (max-width: 958px) {
   .SearchControl {
+    align-self: center;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
     font-size: 1.5em;
   }
+  .SearchControl .icon {
+    padding: 10px;
+    position: relative;
+    color: #292929;
+  }
   .SearchControl input {
-    padding: 4px 12px 4px 40px;
+    padding: 23px 15px 15px 5px;
     font-size: .8em;
+    border: none;
+    width: 80%;
   }
   .SearchControl input::-webkit-input-placeholder {
     font-size: 1em;
     margin-top: 3px;
     font-weight: 300;
+    color: #292929;
+  }
+  .SearchControl .ToggleMenu {
+    display: block;
   }
 }

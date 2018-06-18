@@ -5,11 +5,14 @@
 }
 @media only screen and (max-width: 958px) {
   .Header {
-    grid-template-areas: 'logo menu';
-    grid-template-columns: max-content 1fr;
+    grid-template-areas: 'logo search menu';
+    grid-template-columns: max-content 1fr max-content;
   }
   .Header .HeaderTopBar {
     grid-area: logo;
+  }
+  .Header .SearchControlMobile {
+    grid-area: search;
   }
   .Header .HeaderLinks {
     grid-area: menu;

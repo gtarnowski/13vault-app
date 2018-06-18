@@ -9,6 +9,7 @@
   width: 225px;
   margin-top: 15px;
   box-shadow: @deep-fog;
+  font-size: 16px;
 
   li {
     text-transform: none;
@@ -20,5 +21,20 @@
       background-color: @light-hover;
       color: @primary;
     }
+  }
+
+  @media @phones-only {
+    width: 100%;
+
+    li {
+      font-size: 1em;
+    }
+  }
+  @media @smartphones-tablets {
+    width: 300px;
+    margin-left: 15px;
+  }
+  @media @mobiles-only {
+    top: 70px;
   }
 }

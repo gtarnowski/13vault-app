@@ -7,11 +7,14 @@
   color: @snowy;
 
   @media @mobiles-only {
-    grid-template-areas: 'logo menu';
-    grid-template-columns: max-content 1fr;
+    grid-template-areas: 'logo search menu';
+    grid-template-columns: max-content 1fr max-content;
 
     .HeaderTopBar {
       grid-area: logo;
+    }
+    .SearchControlMobile {
+      grid-area: search;
     }
     .HeaderLinks {
       grid-area: menu;

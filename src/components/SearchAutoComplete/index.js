@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component,Fragment} from 'react'
 import autoComplete from '../../queries/autoComplete'
 import SpinnerSmall from '../Loader/SpinnerSmall'
 import { graphql } from 'react-apollo'
@@ -7,26 +7,57 @@ import { Link } from 'react-router-dom'
 import './index.css'
 
 class SearchAutoComplete extends Component {
+  node = null
+
+  componentWillReceiveProps (nextProps) {
+    console.log(nextProps)
+  }
+
+  componentWillMount () {
+    window.addEventListener('click', this.onBackdropClick)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('click', this.onBackdropClick)
+  }
+
+  onBackdropClick = ({ target }) => {
+    if (!this.node.contains(target)) {
+      window.removeEventListener('click', this.onBackdropClick, false)
+      this.props.onClearSearch()
+    }
+  }
+
   render () {
     const { data: { loading, autoComplete } } = this.props
-    console.log('props', this.props)
-
     return (
-      <div className="SearchAutoComplete">
+      <div className="SearchAutoComplete" ref={r => { this.node = r }}>
         {loading ? (
           <SpinnerSmall />
         ) : (
-          <ul>
-            {autoComplete.autoComplete.length > 0 ? autoComplete.autoComplete.map((result, key) => (
-              <Link key={key} to={``}>
-                <li>
-                  {result.name}
-                </li>
-              </Link>
-            )) : (
-              <li>Brak wyników</li>
+          <Fragment>
+            <ul>
+              {autoComplete.autoComplete.length > 0 ? autoComplete.autoComplete.map((result, key) => (
+                <Link key={key} to={``}>
+                  <li>
+                    {result.name}
+                  </li>
+                </Link>
+              )) : (
+                <li>Brak wyników</li>
+              )}
+            </ul>
+            {autoComplete.allResults > 10 && (
+              <ul>
+                <hr />
+                <Link to={``}>
+                  <li>
+                    Pokaż więcej
+                  </li>
+                </Link>
+              </ul>
             )}
-          </ul>
+          </Fragment>
         )}
       </div>
     )

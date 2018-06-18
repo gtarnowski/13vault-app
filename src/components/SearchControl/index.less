@@ -17,19 +17,38 @@
     position: absolute;
     top: 5px;
   }
+  .ToggleMenu {
+    display: none;
+  }
 
   @media @mobiles-only {
-    input {
-      padding: 4px 12px 4px 40px;
-      font-size: .8em;
+    align-self: center;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    font-size: 1.5em;
 
+    .icon {
+      padding: 10px;
+      position: relative;
+      color: @dark-primary;
+    }
+
+    input {
+      padding: 23px 15px 15px 5px;
+      font-size: .8em;
+      border: none;
+      width: 80%;
       &::-webkit-input-placeholder {
         font-size: 1em;
         margin-top:3px;
         font-weight: 300;
+        color: @dark-primary;
       }
     }
-    font-size: 1.5em;
 
+    .ToggleMenu {
+      display: block;
+    }
   }
 }

@@ -1,0 +1,30 @@
+@import "../../styles/media";
+@import "../../styles/colors";
+
+.SearchControlMobile {
+  align-self: center;
+  justify-self: end;
+  display: block;
+
+  .open-icon {
+    svg {
+      font-size: 1.5em;
+    }
+  }
+
+  .ToggleMenu {
+    position: absolute;
+    right: 5px;
+    top: 20px;
+
+    .bar-top,
+    .bar-mid,
+    .bar-bot {
+      background-color: @dark-primary;
+    }
+
+  }
+  @media @desktops {
+    display: none;
+  }
+}

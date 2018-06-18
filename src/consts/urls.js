@@ -14,7 +14,7 @@ export const URLS = {
   POST_CULTURE: '/post-culture',
   TECH_SCIENCE: '/tech-science',
   CREATION: '/creation',
-  SEARCH: '/search',
+  SEARCH: '/search/:query',
   EDIT: '/edit'
 }
 export const NAV_LINKS = [
