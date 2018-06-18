@@ -1,0 +1,23 @@
+.SearchControlMobile {
+  align-self: center;
+  justify-self: end;
+  display: block;
+}
+.SearchControlMobile .open-icon svg {
+  font-size: 1.5em;
+}
+.SearchControlMobile .ToggleMenu {
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
+.SearchControlMobile .ToggleMenu .bar-top,
+.SearchControlMobile .ToggleMenu .bar-mid,
+.SearchControlMobile .ToggleMenu .bar-bot {
+  background-color: #292929;
+}
+@media only screen and (min-width: 959px) {
+  .SearchControlMobile {
+    display: none;
+  }
+}

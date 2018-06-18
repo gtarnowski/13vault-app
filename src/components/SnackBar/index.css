@@ -1,0 +1,17 @@
+.SnackBar {
+  z-index: 3000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  transition: transform 0.1s, box-shadow 0.3s;
+}
+.SnackBar[data-open='true'] {
+  transform: translateY(0px);
+}
+.SnackBar[data-open='false'] {
+  transform: translateY(-100px);
+}
