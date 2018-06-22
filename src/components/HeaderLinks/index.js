@@ -25,60 +25,62 @@ class HeaderLinks extends Component {
     }
   }
 
-    onOpen = () => {
-      if (this.state.open) {
-        this.setState({ open: false })
-      } else {
-        this.setState({ open: true })
-        window.addEventListener('click', this.onBackdropClick, false)
-      }
+  onOpen = () => {
+    console.log('here')
+    if (this.state.open) {
+      this.setState({ open: false })
+    } else {
+      this.setState({ open: true })
+      window.addEventListener('click', this.onBackdropClick, false)
     }
-    render () {
-      const { state: { open }, props: { location: { pathname } } } = this
-      return (
-        <Fragment>
-          <div className="HeaderLinks">
-            <div className="BarsMenu" ref={r => { this.closeButtonNode = r }}>
-              <ToggleMenu open={open} onOpen={this.onOpen}/>
-            </div>
+  }
 
-            <div className="container">
-              {NAV_LINKS.map(({ name, url }, key) => (
-                <Link
-                  to={url}
-                  key={key}
-                  data-active={pathname === url}
-                >
-                  {name}
-                </Link>
-              ))}
-              <SearchControl />
-            </div>
+  render () {
+    const { state: { open }, props: { location: { pathname } } } = this
+    return (
+      <Fragment>
+        <div className="HeaderLinks">
+          <div className="BarsMenu" ref={r => { this.closeButtonNode = r }}>
+            <ToggleMenu open={open} onOpen={this.onOpen}/>
           </div>
 
-          <div className="MobileMenu" data-open={open} ref={r => { this.node = r }}>
-            <Link className="logo" to={URLS.HOME}>
-              <FontIcon icon={faCog} size="2x" className="icon-logo"/>
-              <h1>13 <span>SCHRON</span></h1>
-            </Link>
-            <hr />
-            {NAV_LINKS.map(({ name, url, icon }, key) => (
+          <div className="container">
+            {NAV_LINKS.map(({ name, url }, key) => (
               <Link
                 to={url}
                 key={key}
                 data-active={pathname === url}
               >
-                <FontIcon icon={icon}/>
                 {name}
               </Link>
             ))}
-            <hr/>
-            <SocialIcons />
+            <SearchControl onOpen={this.onOpen} />
           </div>
-        </Fragment>
+        </div>
 
-      )
-    }
+        <div className="MobileMenu" data-open={open} ref={r => { this.node = r }}>
+          <Link className="logo" to={URLS.HOME}>
+            <FontIcon icon={faCog} size="2x" className="icon-logo"/>
+            <h1>13 <span>SCHRON</span></h1>
+          </Link>
+          <hr />
+          {NAV_LINKS.map(({ name, url, icon }, key) => (
+            <Link
+              to={url}
+              key={key}
+              data-active={pathname === url}
+            >
+              <FontIcon icon={icon}/>
+              {name}
+            </Link>
+          ))}
+          <hr/>
+          <SocialIcons />
+        </div>
+      </Fragment>
+
+    )
+  }
 }
 
 export default withRouter(HeaderLinks)

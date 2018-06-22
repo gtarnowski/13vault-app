@@ -34,6 +34,11 @@
   justify-self: end;
   margin-bottom: 12px;
 }
+@media only screen and (max-width: 350px) {
+  .HeaderLinks {
+    padding-right: 5px;
+  }
+}
 @media only screen and (max-width: 958px) {
   .HeaderLinks {
     background-color: #292929;

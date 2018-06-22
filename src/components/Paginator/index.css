@@ -24,10 +24,12 @@
 .Paginator a,
 .Paginator li {
   display: inline-block;
+  vertical-align: middle;
 }
 .Paginator a {
   background-color: #fff;
   color: #292929;
+  box-shadow: 0 1px 3px rgba(128, 128, 128, 0.2);
   cursor: pointer;
   font-weight: 300;
   margin: 0 5px;
@@ -38,13 +40,11 @@
 }
 .Paginator a:hover:not(.separator) {
   background-color: #e8bb08;
-  border: 1px solid #e8bb08;
   color: #fff !important;
 }
 .Paginator a[data-active='true'] {
-  border: 1px solid #e8bb08;
   color: #e8bb08;
-  font-weight: 500;
+  font-weight: 600;
 }
 .Paginator a.separator {
   cursor: default;

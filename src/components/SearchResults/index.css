@@ -1,0 +1,11 @@
+.SearchResults {
+  display: grid;
+  grid-row-gap: 10px;
+}
+.SearchResults .content {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  hyphens: auto;
+}

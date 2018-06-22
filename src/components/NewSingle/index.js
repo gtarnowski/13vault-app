@@ -26,6 +26,6 @@ class NewSingle extends Component {
 const NewSingleWithQuery = graphql(news)(NewSingle)
 
 const NewSingleWithParams = ({ match: { params: { id } } }) => (
-  <NewSingleWithQuery id={id} />
+  <NewSingleWithQuery _id={id} />
 )
 export default NewSingleWithParams

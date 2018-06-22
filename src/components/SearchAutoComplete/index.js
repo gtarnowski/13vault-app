@@ -47,7 +47,7 @@ class SearchAutoComplete extends Component {
                 <li>Brak wyników</li>
               )}
             </ul>
-            {autoComplete.allResults > 10 && (
+            {autoComplete.allResultsCount > 10 && (
               <ul>
                 <hr />
                 <Link to={``}>

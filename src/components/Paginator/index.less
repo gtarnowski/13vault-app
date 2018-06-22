@@ -30,11 +30,13 @@
   a,
   li {
     display: inline-block;
+    vertical-align: middle;
   }
 
   a {
     background-color: @snowy;
     color: @dark-primary;
+    box-shadow: @mighty-shadows;
     cursor: pointer;
     font-weight: 300;
     margin: 0 5px;
@@ -45,14 +47,16 @@
 
     &:hover:not(.separator) {
       background-color: @primary;
-      border: 1px solid @primary;
+
+      //border: 1px solid @primary;
       color: @snowy !important;
     }
 
     &[data-active='true'] {
-      border: 1px solid @primary;
+      //border: 1px solid @primary;
       color: @primary;
-      font-weight: 500;
+      font-weight: 600;
+
     }
 
     &.separator {

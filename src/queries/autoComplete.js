@@ -1,16 +1,13 @@
 import gql from 'graphql-tag'
 
 export default gql`
-query autoComplete ($regex: String! $limit: Int $page: Int = 1) {
-  autoComplete(regex: $regex limit: $limit page: $page) {
+query autoComplete ($regex: String!) {
+  autoComplete(regex: $regex) {
     autoComplete {
-      id
+      _id
       name
     }
-    pagination {
-      total,
-      page
-    }
+    allResultsCount
   }
 }
 `

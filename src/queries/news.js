@@ -1,8 +1,9 @@
 import gql from 'graphql-tag'
 
 export default gql`
-  query news ($id: ID!) {
-    news(id: $id) {
+  query news ($_id: ID!) {
+    news(_id: $_id) {
+      _id
       content
       title
       userId

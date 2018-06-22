@@ -19,7 +19,7 @@ export const URLS = {
 }
 export const NAV_LINKS = [
   {
-    name: 'Nowiny',
+    name: 'Newsy',
     url: URLS.NEWS,
     icon: faComments
   },

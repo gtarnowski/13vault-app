@@ -25,7 +25,7 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 })
 
 const client = new ApolloClient({
-  link: concat(authMiddleware, new HttpLink({uri: process.env.REACT_APP_GRAPHQL_ENDPOINT || 'https://api-dev.workmachines.com/graphql/'})),
+  link: concat(authMiddleware, new HttpLink({uri: process.env.REACT_APP_GRAPHQL_ENDPOINT})),
   cache: new InMemoryCache()
 })
 

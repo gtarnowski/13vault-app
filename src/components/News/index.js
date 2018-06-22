@@ -12,11 +12,12 @@ import './index.css'
 const News = ({ data: { newsAll, loading }, onPageChange }) => {
   if (loading) return <Spinner />
   const { pagination, news } = newsAll
+  console.log(newsAll)
   return (
     <div className="News">
-      {news.map(({ id, title, content, date }, key) => (
-        <Link to={URLS.NEWS + '/' + id} key={key} >
-          <div className="NewsBox">
+      {news.map(({ _id, title, description, date }, key) => (
+        <Link to={URLS.NEWS + '/' + _id} key={key} >
+          <div className="NewsItem">
             <div className="thumbnail">
               <FontIcon icon={faImage} size="4x"/>
             </div>
@@ -28,7 +29,7 @@ const News = ({ data: { newsAll, loading }, onPageChange }) => {
               </div>
               <div className="content-box">
                 <div
-                  dangerouslySetInnerHTML={{__html: content}}
+                  dangerouslySetInnerHTML={{__html: description}}
                 />
               </div>
             </div>

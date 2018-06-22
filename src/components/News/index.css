@@ -1,10 +1,9 @@
 .News {
-  padding: 20px;
-  display: grid;
-  grid-row-gap: 20px;
   margin: 0 auto;
+  grid-row-gap: 20px;
+  display: grid;
 }
-.NewsBox {
+.NewsItem {
   padding: 10px;
   display: grid;
   background-color: #fff;
@@ -13,9 +12,9 @@
   grid-template-columns: max-content 1fr;
   grid-column-gap: 15px;
 }
-.NewsBox .content .title small {
+.NewsItem .content .title small {
   display: block;
 }
-.NewsBox:hover {
+.NewsItem:hover {
   box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
 }

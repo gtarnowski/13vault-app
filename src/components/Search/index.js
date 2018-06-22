@@ -3,11 +3,22 @@ import './index.css'
 import SearchResults from '../SearchResults'
 
 class Search extends Component {
+  state = {
+    page: 1
+  }
+
+  onPageChange = page => {
+    this.setState({page})
+  }
+
   render () {
-    console.log('props', this.props)
     return (
-      <div>
-        <SearchResults regex={this.props.match.params.query}/>
+      <div className="SearchResults">
+        <SearchResults
+          page={this.state.page}
+          regex={this.props.match.params.query}
+          onPageChange={this.onPageChange}
+        />
       </div>
     )
   }

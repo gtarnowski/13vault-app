@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300i,400,400i,600,700,900&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Nixie+One');
 html,
 body,
 div,
@@ -144,4 +145,10 @@ body,
 }
 .Content {
   background-color: #f1f1f1;
+  padding: 10px;
+}
+@media only screen and (min-width: 601px) {
+  .Content {
+    padding: 20px;
+  }
 }

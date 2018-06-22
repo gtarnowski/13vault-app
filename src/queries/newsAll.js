@@ -5,10 +5,12 @@ export default gql`
     newsAll(page: { limit: 25, page: $page }) {
       news {
         title
-        id
+        _id
         email
         username
+        content
         date
+        description
       }
       pagination {
         page

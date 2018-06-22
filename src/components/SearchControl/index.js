@@ -19,6 +19,7 @@ class SearchControl extends Component {
 
   onKeyPress = ({ target: { value }, which }) => {
     if (which === 13) {
+      this.props.onOpen()
       this.onClearSearch()
       this.props.history.push('/search/' + value)
     }
