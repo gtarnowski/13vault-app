@@ -21,17 +21,21 @@
     grid-column-gap: 20px;
     justify-content: space-between;
 
-    a {
+    .main-link {
       text-transform: uppercase;
       font-weight:600;
       padding-bottom: 10px;
       border-bottom: 1px solid transparent;
       margin-bottom: 12px;
-      transition: .3s ease-out;
+      position: relative;
 
       &:hover, &[data-active="true"] {
         color: @primary;
         border-color: @primary !important;
+
+        .SecondaryLevelMenu {
+          display: grid;
+        }
       }
     }
 
@@ -45,6 +49,7 @@
   }
   @media @mobiles-only {
     background-color: @dark-primary;
+
     .container {
       display: none;
     }
@@ -146,3 +151,55 @@
     display: none;
   }
 }
+
+.SecondaryLevelMenu {
+  z-index: 2000;
+  text-transform: capitalize;
+  position: absolute;
+  background-color: @snowy;
+  box-shadow: @deep-fog;
+  display: none;
+  top: 25px;
+  grid-template-columns: 200px 300px;
+
+  .LeftPanel, .RightPanel {
+    margin: 20px;
+  }
+
+  .LeftPanel {
+    border-right: 1px solid @primary;
+  }
+
+  .RightPanel {
+    h2 {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-size: 1.2em;
+    }
+  }
+
+  .menu-item {
+    display: block;
+    margin-bottom: 10px;
+    color: @dark-primary;
+    border-left: 3px solid transparent;
+
+    a:hover {
+      color: @primary;
+    }
+    &[data-active="false"], &[data-active="true"] {
+      padding-left: 10px;
+    }
+    &[data-active="true"] {
+      border-color: @primary;
+    }
+  }
+  &:hover {
+    display: grid;
+  }
+
+   a {
+
+   }
+}
+

@@ -17,18 +17,22 @@
   grid-column-gap: 20px;
   justify-content: space-between;
 }
-.HeaderLinks .container a {
+.HeaderLinks .container .main-link {
   text-transform: uppercase;
   font-weight: 600;
   padding-bottom: 10px;
   border-bottom: 1px solid transparent;
   margin-bottom: 12px;
-  transition: 0.3s ease-out;
+  position: relative;
 }
-.HeaderLinks .container a:hover,
-.HeaderLinks .container a[data-active="true"] {
+.HeaderLinks .container .main-link:hover,
+.HeaderLinks .container .main-link[data-active="true"] {
   color: #e8bb08;
   border-color: #e8bb08 !important;
+}
+.HeaderLinks .container .main-link:hover .SecondaryLevelMenu,
+.HeaderLinks .container .main-link[data-active="true"] .SecondaryLevelMenu {
+  display: grid;
 }
 .HeaderLinks .container .SearchControl {
   justify-self: end;
@@ -130,4 +134,45 @@
   .MobileMenu {
     display: none;
   }
+}
+.SecondaryLevelMenu {
+  z-index: 2000;
+  text-transform: capitalize;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
+  display: none;
+  top: 25px;
+  grid-template-columns: 200px 300px;
+}
+.SecondaryLevelMenu .LeftPanel,
+.SecondaryLevelMenu .RightPanel {
+  margin: 20px;
+}
+.SecondaryLevelMenu .LeftPanel {
+  border-right: 1px solid #e8bb08;
+}
+.SecondaryLevelMenu .RightPanel h2 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.SecondaryLevelMenu .menu-item {
+  display: block;
+  margin-bottom: 10px;
+  color: #292929;
+  border-left: 3px solid transparent;
+}
+.SecondaryLevelMenu .menu-item a:hover {
+  color: #e8bb08;
+}
+.SecondaryLevelMenu .menu-item[data-active="false"],
+.SecondaryLevelMenu .menu-item[data-active="true"] {
+  padding-left: 10px;
+}
+.SecondaryLevelMenu .menu-item[data-active="true"] {
+  border-color: #e8bb08;
+}
+.SecondaryLevelMenu:hover {
+  display: grid;
 }

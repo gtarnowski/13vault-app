@@ -17,6 +17,151 @@ export const URLS = {
   SEARCH: '/search/:query',
   EDIT: '/edit'
 }
+
+const falloutChildren = [
+  {
+    name: 'O grze',
+    url: '/about'
+  },
+  {
+    name: 'Solucja',
+    url: '/walkthrough'
+  },
+  {
+    name: 'Ciekawe Questy',
+    url: '/easter-eggs'
+  },
+  {
+    name: 'Porady',
+    url: '/tips'
+  },
+  {
+    name: 'Bohater',
+    url: '/character'
+  },
+  {
+    name: 'Ekwipunek',
+    url: '/equipment'
+  },
+  {
+    name: 'Npc',
+    url: '/npc'
+  }
+]
+const falloutSecondaryLinks = [
+  {
+    name: 'Fallout',
+    url: '/fallout',
+    children: falloutChildren
+  },
+  {
+    name: 'Fallout 2',
+    url: '/fallout2',
+    children: falloutChildren
+  },
+  {
+    name: 'Fallout 3',
+    url: '/fallout3',
+    children: [...falloutChildren, {
+      name: 'Van Buren',
+      url: '/van-buren'
+    }]
+  },
+  {
+    name: 'Fallout Tactics',
+    url: '/fallout-tactics',
+    children: falloutChildren
+  }
+]
+
+const postSecondaryLinks = [
+  {
+    name: 'Postkultura',
+    url: '/post',
+    children: [
+      {
+        name: 'Filmy i seriale',
+        url: '/movies'
+      },
+      {
+        name: 'Powieści i Opowiadania',
+        url: '/stories'
+      },
+      {
+        name: 'Komiksy',
+        url: '/comics'
+      },
+      {
+        name: 'Muzyka',
+        url: '/music'
+      },
+      {
+        name: 'Muzyka z Fallout',
+        url: '/fallout-music'
+      },
+      {
+        name: 'Teledyski 13 Schronu',
+        url: '/videos'
+      }
+    ]
+  },
+  {
+    name: 'Gry',
+    url: '/games',
+    children: [
+      {
+        name: 'Gry PC',
+        url: '/games-pc'
+      },
+      {
+        name: 'Gry planszowe',
+        url: '/games-board'
+      },
+      {
+        name: 'Gry fabularne',
+        url: '/games-fiction'
+      },
+      {
+        name: 'Gry karciane',
+        url: '/games-cards'
+      },
+      {
+        name: 'Gry paragrafowe',
+        url: '/games-capitulation'
+      }
+    ]
+  },
+  {
+    name: 'Rozrywka',
+    url: '/entertainment',
+    children: [
+      {
+        name: 'Fallout Quiz',
+        url: '/fallout-quiz'
+      },
+      {
+        name: 'Easter Eggs',
+        url: '/easter-eggs'
+      },
+      {
+        name: 'Humor',
+        url: '/humour'
+      },
+      {
+        name: 'Humor pisany',
+        url: '/humour-written'
+      },
+      {
+        name: 'Criticals',
+        url: '/criticals'
+      },
+      {
+        name: 'Other',
+        url: '/other'
+      }
+    ]
+  }
+]
 export const NAV_LINKS = [
   {
     name: 'Newsy',
@@ -31,12 +176,16 @@ export const NAV_LINKS = [
   {
     name: 'Fallout',
     url: URLS.FALLOUT,
-    icon: faCircle
+    icon: faCircle,
+    children: falloutSecondaryLinks,
+    defaultChildren: falloutSecondaryLinks[0]
   },
   {
     name: 'Postkultura',
     url: URLS.POST_CULTURE,
-    icon: faCodeBranch
+    icon: faCodeBranch,
+    children: postSecondaryLinks,
+    defaultChildren: postSecondaryLinks[0]
   },
   {
     name: 'Nauka I Technika',
