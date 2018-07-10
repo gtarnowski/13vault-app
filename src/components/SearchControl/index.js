@@ -1,12 +1,10 @@
 import React, { Component, Fragment } from 'react'
 import { withRouter } from 'react-router-dom'
-import { URLS } from '../../consts/urls'
 import { AutoCompleteWithQuery } from '../SearchAutoComplete'
 import FontIcon from '@fortawesome/react-fontawesome'
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch'
 import './index.css'
 import ToggleMenu from '../ToggleMenu'
-import clone from 'lodash/clone'
 
 class SearchControl extends Component {
   state = {

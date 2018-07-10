@@ -1,7 +1,8 @@
-import React, {Component,Fragment} from 'react'
+import React, { Component, Fragment } from 'react'
 import autoComplete from '../../queries/autoComplete'
-import SpinnerSmall from '../Loader/SpinnerSmall'
+import SpinnerSmall from '../Spinners/SpinnerSmall'
 import { graphql } from 'react-apollo'
+
 // Components
 import { Link } from 'react-router-dom'
 import './index.css'

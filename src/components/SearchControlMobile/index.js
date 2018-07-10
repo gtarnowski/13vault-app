@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
-import './index.css'
-import FontIcon from '@fortawesome/react-fontawesome'
-import faSearch from '@fortawesome/fontawesome-free-solid/faSearch'
+
+// Components
 import SearchControl from '../SearchControl'
 import SnackBar from '../SnackBar'
-
+import FontIcon from '@fortawesome/react-fontawesome'
+import faSearch from '@fortawesome/fontawesome-free-solid/faSearch'
+import './index.css'
 
 class SearchControlMobile extends Component {
   state = {

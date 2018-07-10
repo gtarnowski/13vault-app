@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import news from '../../queries/news'
-import Spinner from '../Loader/Spinner'
+import Spinner from '../Spinners/Spinner'
 // import './index.css'
 
 class NewSingle extends Component {

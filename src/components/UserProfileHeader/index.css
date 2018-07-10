@@ -1,0 +1,41 @@
+.UserProfileHeader {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(3, max-content);
+}
+.UserProfileHeader .user-name {
+  font-size: 1.1em;
+  color: #b1b1b3;
+}
+.UserProfileHeader .chevron {
+  color: #b1b1b3;
+}
+.UserProfileHeader .drop-down {
+  position: absolute;
+  top: 65px;
+  box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
+  width: 270px;
+  left: auto;
+  right: 0;
+  background-color: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s ease-in;
+}
+.UserProfileHeader .drop-down .dd-wrapper {
+  padding: 10px;
+}
+.UserProfileHeader .drop-down[data-open="true"] {
+  height: max-content;
+  animation: showDropdown 0.2s cubic-bezier(0.6, 0.2, 0.1, 1) both;
+}
+.UserProfileHeader:hover {
+  cursor: pointer;
+}
+.UserProfileHeader .SmallSpinnerLoaderContainer {
+  position: relative;
+  text-align: start;
+  bottom: 0;
+}

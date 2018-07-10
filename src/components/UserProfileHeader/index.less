@@ -1,0 +1,55 @@
+@import '../../styles/media';
+@import '../../styles/colors';
+
+.UserProfileHeader {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(3, max-content);
+
+  .user-name {
+    font-size: 1.1em;
+    color: @admin-gray;
+  }
+  .chevron {
+    color: @admin-gray;
+  }
+
+
+  .drop-down {
+    position: absolute;
+    top: 65px;
+    box-shadow: @deep-fog;
+    width: 270px;
+    left: auto;
+    right: 0;
+    background-color: @snowy;
+    height: 0;
+    overflow: hidden;
+    transition: height .2s ease-in;
+
+    .dd-wrapper {
+      padding: 10px;
+
+
+    }
+
+    &[data-open="true"] {
+      height: max-content;
+      animation: showDropdown .2s cubic-bezier(.6, .2, .1, 1) both;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+  }
+
+
+  .SmallSpinnerLoaderContainer {
+    position: relative;
+    text-align: start;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,62 @@
+.Input {
+  position: relative;
+}
+.Input input {
+  outline: 0;
+  box-sizing: border-box;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 15px;
+  padding: 0.875em 0.78em;
+  display: block;
+  width: 100%;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.Input input:not([value='']) {
+  font-size: 15px;
+  padding: 1.4em 0.78em 0.35em 0.78em;
+}
+.Input input:not([value='']) + label {
+  color: #e8bb08;
+  opacity: 1;
+  transition: 0.2s ease-out;
+}
+.Input input:not([value='']) + label::-webkit-input-placeholder {
+  display: none;
+}
+.Input input::-webkit-input-placeholder {
+  font-weight: 300;
+}
+.Input input:focus {
+  border-color: #e8bb08 !important;
+  -webkit-box-shadow: 0 1px 3px rgba(128, 128, 128, 0.2);
+  box-shadow: 0 1px 3px rgba(128, 128, 128, 0.2);
+}
+.Input label {
+  font-size: 0.8em;
+  left: 13.5px !important;
+  opacity: 0;
+  padding-left: 0;
+  position: absolute;
+  top: 3.5px !important;
+}
+.Input[data-error='true'] input {
+  border: 1px solid #eb4646;
+  margin-bottom: 30px;
+}
+.Input[data-error='true'] label {
+  color: #eb4646 !important;
+}
+.Input[data-error='true'] small {
+  bottom: -20px;
+  color: #eb4646;
+  left: 5px;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 95%;
+}

@@ -9,6 +9,9 @@
   &:focus {
     outline-width: 0;
   }
+  &:hover {
+    cursor: pointer;
+  }
 
   [class*='bar-'] {
     -ms-transform: rotate(0deg);
@@ -23,6 +26,31 @@
     transform: rotate(0deg);
     transition: 0.2s ease all;
     width: 35px;
+  }
+
+  &[data-dark="true"] {
+    [class*='bar-'] {
+      background-color: @gray;
+    }
+
+    &:hover {
+      transition: 0.1s ease all;
+      .bar-top {
+        transform: rotate(90deg);
+        transform-origin: 20% 15%;
+        opacity: 0;
+      }
+
+      .bar-mid {
+        transform: rotate(90deg);
+        transform-origin: 50% 35%;
+      }
+
+      .bar-bot {
+        transform: rotate(90deg);
+        transform-origin: 80% 45%;
+      }
+    }
   }
 
   .bar-bot {

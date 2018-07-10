@@ -1,19 +1,22 @@
-import React, {Component} from 'react'
+import React from 'react'
+import { withRouter } from 'react-router-dom'
+import { URLS } from '../../consts/urls'
 
 import SearchControlMobile from '../SearchControlMobile'
 import HeaderTopBar from '../HeaderTopBar'
 import HeaderLinks from '../HeaderLinks'
 import './index.css'
-class Header extends Component {
-  render () {
-    return (
-      <nav className="Header">
-        <HeaderTopBar />
-        <SearchControlMobile />
-        <HeaderLinks />
-      </nav>
-    )
-  }
+
+const Header = ({ location: { pathname } }) => {
+  if (pathname.match(URLS.ADMIN) || pathname.match(URLS.SIGN_IN)) return <div />
+
+  return (
+    <nav className="Header">
+      <HeaderTopBar />
+      <SearchControlMobile />
+      <HeaderLinks />
+    </nav>
+  )
 }
 
-export default Header
+export default withRouter(Header)

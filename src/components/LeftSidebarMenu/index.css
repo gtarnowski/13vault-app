@@ -1,0 +1,75 @@
+@keyframes slide {
+  0% {
+    transform: translate3d(-180px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.LeftSidebarMenu {
+  overflow: hidden;
+  position: fixed;
+  box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
+  background-color: #fff;
+  width: 280px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  z-index: 10000;
+  transition: 0.3s cubic-bezier(0.51, 0.92, 0.24, 1.15);
+  animation: slide .4s ;
+}
+.LeftSidebarMenu header {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+}
+.LeftSidebarMenu header .logo h1 {
+  padding-left: 0;
+}
+.LeftSidebarMenu header .menu-button {
+  justify-self: end;
+}
+.LeftSidebarMenu[data-collapsed="true"] {
+  width: 75px;
+}
+.LeftSidebarMenu[data-collapsed="true"] .logo h1 {
+  color: #e8bb08;
+}
+.LeftSidebarMenu[data-collapsed="false"] .menu-item svg {
+  width: 20px;
+  padding-right: 10px;
+}
+.LeftSidebarMenu section .menu {
+  margin-top: 200px;
+}
+.LeftSidebarMenu section .menu .menu-item {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+  color: #565656;
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 25px;
+  transition: color 0.2s ease-in-out;
+}
+.LeftSidebarMenu section .menu .menu-item[data-active="true"] {
+  border-left: 3px solid #e8bb08;
+  background-color: rgba(232, 187, 6, 0.16);
+  color: #e8bb08;
+}
+.LeftSidebarMenu section .menu .menu-item:hover {
+  color: #e8bb08 !important;
+}
+.LeftSidebarMenu .background-icon {
+  position: absolute;
+  left: 120px;
+  font-size: 20em;
+  bottom: 0;
+  color: rgba(190, 190, 190, 0.16);
+}

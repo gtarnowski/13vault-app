@@ -1,0 +1,68 @@
+@import './media';
+@import './colors';
+
+.medium-editor-toolbar {
+  border: none !important;
+  box-shadow: @deep-fog !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  z-index: 11000 !important;
+
+  * {
+    transition: none !important;
+  }
+
+  .medium-editor-toolbar-actions {
+    border-radius: 0;
+  }
+
+  button {
+    background: @admin-gray !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    b {
+      color: @gray;
+    }
+
+    &:hover, &.medium-editor-button-active {
+      background-color: @black !important;
+
+      b {
+        color: @snowy;
+      }
+    }
+  }
+  &::after {
+    border-color: @admin-gray transparent !important;
+  }
+
+
+}
+
+.medium-editor-toolbar-form  {
+  background: @admin-gray !important;
+  border-radius: 0 !important;
+
+  a {
+    background-color: @admin-gray !important;
+    color: @gray !important;
+    &:hover {
+      color: #000 !important;
+    }
+  }
+
+  .medium-editor-toolbar-input {
+    background-color: @admin-gray !important;
+
+
+
+
+    &::placeholder {
+      color: @snowy;
+    }
+  }
+}
+
+

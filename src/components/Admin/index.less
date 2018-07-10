@@ -1,0 +1,15 @@
+@import '../../styles/media';
+@import '../../styles/colors';
+
+.AdminContent {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  background-color: @background;
+  width: calc(~'100% - 320px');
+  transition: .1s ease-out;
+
+  &[data-collapsed="true"] {
+    width: calc(~'100% - 120px');
+  }
+}

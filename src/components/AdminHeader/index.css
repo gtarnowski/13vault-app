@@ -1,0 +1,35 @@
+@keyframes slide-down {
+  0% {
+    transform: translate3d(0, -180px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.AdminHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  height: 70px;
+  z-index: 9000;
+  box-shadow: 0 1px 3px rgba(128, 128, 128, 0.2);
+  display: grid;
+  animation: slide-down 0.4s;
+}
+.AdminHeader .wrapper {
+  margin: 0 30px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-content: center;
+}
+.AdminHeader .wrapper aside {
+  justify-self: end;
+  align-self: center;
+}
+.AdminHeader .wrapper header {
+  justify-self: start;
+  align-self: center;
+}

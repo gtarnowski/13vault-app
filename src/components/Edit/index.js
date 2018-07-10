@@ -1,11 +1,8 @@
-import React, {Component, Fragment} from 'react'
-import {Editor, EditorState, RichUtils} from 'draft-js'
-import ReactDOM from 'react-dom'
-// import './index.css'
+import React, { Component, Fragment } from 'react'
+import { Editor, EditorState, RichUtils } from 'draft-js'
+import 'draft-js/dist/Draft.css'
 
-import 'draft-js/dist/Draft.css';
-
-class Edit extends React.Component {
+class Edit extends Component {
   constructor (props) {
     super(props)
     this.state = {editorState: EditorState.createEmpty()}

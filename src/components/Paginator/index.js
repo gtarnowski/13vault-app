@@ -13,7 +13,7 @@ class Paginator extends React.Component {
   }
 
   render () {
-    const { page, pages, getUrl = () => {} } = this.props
+    const { page, pages } = this.props
 
     if (pages < 2) {
       return null

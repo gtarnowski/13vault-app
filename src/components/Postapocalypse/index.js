@@ -5,19 +5,17 @@ import { graphql } from 'react-apollo'
 
 const Postapocalypse = ({ data: { articlesAll, loading } }) => {
   if (loading) return 'loading'
-    const { articles, pagination } = articlesAll
-    return (
-        <div>
-          {articles.map(({ title }, key) => (
-            <p key={key}>
-              {title}
-            </p>
-          ))}
-        </div>
-    )
+  const { articles } = articlesAll
+  return (
+    <div>
+      {articles.map(({ title }, key) => (
+        <p key={key}>
+          {title}
+        </p>
+      ))}
+    </div>
+  )
 }
-
-
 
 export default graphql(articlesAll, { options: {
   variables: {

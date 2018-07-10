@@ -15,7 +15,14 @@ export const URLS = {
   TECH_SCIENCE: '/tech-science',
   CREATION: '/creation',
   SEARCH: '/search/:query',
-  EDIT: '/edit'
+  EDIT: '/edit',
+  SIGN_IN: '/sign-in',
+  ADMIN: '/admin',
+  ADMIN_DASHBOARD: '/admin/dashboard',
+  ADMIN_NEWS: '/admin/news',
+  ADMIN_ARTICLES: '/admin/articles',
+  ADMIN_MY: '/admin/my',
+  ADMIN_FORUM: '/admin/forum'
 }
 
 const falloutChildren = [

@@ -1,0 +1,25 @@
+@import '../../styles/media';
+@import '../../styles/colors';
+
+.VaultTextLogo {
+  color: @gray;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight:900;
+  padding-left: 10px;
+  text-transform: uppercase;
+  transition: color .2s ease-in-out;
+
+  span {
+    color: @gray;
+    font-weight: 200;
+    font-size: 1em;
+    vertical-align: top;
+    margin-left: 7px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: @primary;
+  }
+}

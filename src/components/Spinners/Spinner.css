@@ -1,3 +1,6 @@
+:root {
+  --primary-color: #e8bb08;
+}
 .SpinnerLoaderContainer {
   background-color: #eeeeef52;
   position: absolute;
@@ -10,6 +13,7 @@
   width: 150px;
   height: 150px;
   text-align: center;
+  z-index: 10000;
 }
 
 .SpinnerLoaderContainer svg {
@@ -26,7 +30,7 @@
 
 .spinner {
   --spinner-size: 7;
-  --line-color: #e8bb08;
+  --line-color: var(--primary-color);
   --line-alpha: 1;
   --line-size: 5;
   --ring-color: rgba(101, 101, 101, 0.82);
@@ -41,7 +45,7 @@
 
 .spinner.small {
   --spinner-size: 3;
-  --line-color: #e8bb08;
+  --line-color: var(--primary-color);
   --line-alpha: 1;
   --line-size: 5;
   --ring-color: rgba(101, 101, 101, 0.82);
@@ -56,7 +60,7 @@
 
 .spinner.tiny {
   --spinner-size: 1;
-  --line-color: #e8bb08;
+  --line-color: var(--primary-color);
   --line-alpha: 1;
   --line-size: 5;
   --ring-color: rgba(101, 101, 101, 0.82);
@@ -71,7 +75,7 @@
 
 .spinner .line, .spinner.small .line, .spinner.tiny .line {
   fill: none;
-  stroke: var(--line-color);
+  stroke: var(--primary-color);
   stroke-width: calc(var(--line-size) * 1%);
   opacity: var(--line-alpha);
   stroke-linecap: round;

@@ -1,0 +1,42 @@
+@import '../../styles/media';
+@import '../../styles/colors';
+
+@keyframes slide-down {
+  0% {
+    transform: translate3d(0, -180px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.AdminHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: @snowy;
+  left: 0;
+  right: 0;
+  height: 70px;
+  z-index: 9000;
+  box-shadow: @mighty-shadows;
+  display: grid;
+  animation: slide-down .4s ;
+
+  .wrapper {
+    margin: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-content: center;
+
+    aside {
+      justify-self: end;
+      align-self: center;
+    }
+
+    header {
+      justify-self: start;
+      align-self: center;
+    }
+  }
+}

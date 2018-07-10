@@ -30,7 +30,6 @@ const client = new ApolloClient({
 })
 
 window.apollo = client
-
 ReactDOM.render(
   <ApolloProvider client={client}>
     <App/>

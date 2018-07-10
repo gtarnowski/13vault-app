@@ -14,12 +14,12 @@ const NotFound = () => {
 
       <span>
         Do terminala podano błędny lub przestarzały adress <i>url</i>.
-          <br />
+        <br />
           Spróbuj ponownie bądź skontaktuj się z serwisem
-          <br/>
-          <strong>13 Schronu</strong>
+        <br/>
+        <strong>13 Schronu</strong>
       </span>
-        <hr />
+      <hr />
     </div>
   )
 }

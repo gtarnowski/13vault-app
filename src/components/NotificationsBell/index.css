@@ -1,0 +1,67 @@
+@keyframes showDropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95, 0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.NotificationsBell {
+  padding-right: 40px;
+  position: relative;
+}
+.NotificationsBell .hover {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  transition: 0.2s ease-in;
+}
+.NotificationsBell .hover .icon {
+  font-size: 1.2em;
+  color: #b1b1b3;
+}
+.NotificationsBell .hover .notifications-label {
+  position: absolute;
+  border-radius: 100px;
+  height: 8px;
+  width: 8px;
+  left: 13px;
+  top: -6px;
+  background-color: #e8bb08;
+  content: ' ';
+}
+.NotificationsBell .hover .drop-down {
+  position: absolute;
+  top: 65px;
+  right: -40px;
+  box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
+  width: 170px;
+  background-color: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s ease-in;
+}
+.NotificationsBell .hover .drop-down .dd-wrapper {
+  padding: 10px;
+}
+.NotificationsBell .hover .drop-down .dd-wrapper a {
+  display: block;
+  padding: 7px;
+}
+.NotificationsBell .hover .drop-down .dd-wrapper a:hover {
+  background-color: rgba(232, 187, 6, 0.16) !important;
+  color: #e8bb08;
+}
+.NotificationsBell .hover:hover {
+  cursor: pointer;
+}
+.NotificationsBell .hover:hover .icon {
+  color: #e8bb08;
+}
+.NotificationsBell .hover .drop-down[data-open="true"] {
+  height: max-content;
+  animation: showDropdown 0.2s cubic-bezier(0.6, 0.2, 0.1, 1) both;
+}

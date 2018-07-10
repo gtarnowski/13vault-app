@@ -6,6 +6,9 @@
 .ToggleMenu:focus {
   outline-width: 0;
 }
+.ToggleMenu:hover {
+  cursor: pointer;
+}
 .ToggleMenu [class*='bar-'] {
   -ms-transform: rotate(0deg);
   -o-transition: 0.2s ease all;
@@ -19,6 +22,25 @@
   transform: rotate(0deg);
   transition: 0.2s ease all;
   width: 35px;
+}
+.ToggleMenu[data-dark="true"] [class*='bar-'] {
+  background-color: #565656;
+}
+.ToggleMenu[data-dark="true"]:hover {
+  transition: 0.1s ease all;
+}
+.ToggleMenu[data-dark="true"]:hover .bar-top {
+  transform: rotate(90deg);
+  transform-origin: 20% 15%;
+  opacity: 0;
+}
+.ToggleMenu[data-dark="true"]:hover .bar-mid {
+  transform: rotate(90deg);
+  transform-origin: 50% 35%;
+}
+.ToggleMenu[data-dark="true"]:hover .bar-bot {
+  transform: rotate(90deg);
+  transform-origin: 80% 45%;
 }
 .ToggleMenu .bar-bot {
   margin-bottom: 0;
